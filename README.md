@@ -12,6 +12,11 @@ This is a fork that aims to make carrot actually work. Last confirmed working: `
 
 - Drag the zip into chrome://extensions/ and click install
 
+- Disable the upstream carrot extension if installed to avoid conflicts
+
+https://github.com/user-attachments/assets/7d92269a-57ab-48ee-8291-e58ac18dfade
+
+
 # Frequently asked questions
 
 - I can't open the zip (`Compressed (zipped) Folder Error`)
