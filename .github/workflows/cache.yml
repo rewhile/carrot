@@ -1,0 +1,31 @@
+name: Update user.ratedList
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Caches every hour
+  workflow_dispatch:
+
+jobs:
+  cache:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout cache branch
+        uses: actions/checkout@v3
+        with:
+          ref: cache
+
+      - name: Fetching user.ratedList
+        run: curl -f 'https://codeforces.com/api/user.ratedList?activeOnly=false' -o user.ratedList
+
+      - name: Commit if updated
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add user.ratedList
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "feat: cached user.ratedList"
+            git push origin cache
+          else
+            echo "No changes"
+          fi
+
