@@ -14,8 +14,6 @@ This is a fork that aims to make carrot actually work. Last confirmed working: `
 
 - Disable the upstream carrot extension if installed to avoid conflicts
 
-- IMPORTANT: You need to visit a standing page on cf mirror once. For example: https://mirror.codeforces.com/contest/2069/standings
-
 https://github.com/user-attachments/assets/c982babd-deef-4403-97bf-b6524b6a871e
 
 # Frequently asked questions
