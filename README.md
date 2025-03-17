@@ -1,3 +1,39 @@
+# Carrot hotfix
+
+This is a fork that aims to make carrot actually work. Last confirmed working: `20/02/2025`
+
+![image](https://github.com/user-attachments/assets/217d07e7-07fe-4862-950a-7556a96a9801)
+
+# Installation
+
+- Go to https://github.com/rewhile/carrot/releases/ and download the `carrot.zip` file
+
+- Enable Developer mode on chrome://extensions/
+
+- Drag the zip into chrome://extensions/ and click install
+
+- Disable the upstream carrot extension if installed to avoid conflicts
+
+- IMPORTANT: You need to visit a standing page on cf mirror once. For example: https://mirror.codeforces.com/contest/2069/standings
+
+https://github.com/user-attachments/assets/c982babd-deef-4403-97bf-b6524b6a871e
+
+# Frequently asked questions
+
+- I can't open the zip (`Compressed (zipped) Folder Error`)
+
+You probably tried to open the zip. Please watch the installation video above and drag it to the chrome://extensions/ tab instead
+
+The zip is not actually a zip file, it was renamed from .crx file extension to bypass an error when you try to manually add extension to chrome. More details here: https://www.reddit.com/r/chrome_extensions/comments/zh4ave/comment/jqghtds/
+
+- How do I verify that your file is safe?
+
+You can use 7zip > Open Archive > zip to view the content of the extension
+
+![image](https://github.com/user-attachments/assets/bd6e864c-fb8d-46b8-be8e-f14329f76fe3)
+
+You're also more than welcome to compile carrot yourself using [build.sh](./build.sh)
+
 <h1>
   <sub>
     <img src="https://raw.githubusercontent.com/meooow25/carrot/master/carrot/icons/icon.svg" alt="Carrot logo" height="38">
