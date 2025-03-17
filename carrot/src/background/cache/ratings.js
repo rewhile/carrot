@@ -51,9 +51,14 @@ export default class Ratings {
   async cacheRatings() {
     let users = [];
     try {
-      users = await this.api.user.ratedList(false);
+      users = await this.api.userRatedList(false);
     } catch {
-      return;
+      try {
+        const res = await fetch("https://raw.githubusercontent.com/rewhile/carrot/refs/heads/cache/user.ratedList");
+        users = (await res.json()).result;
+      } catch {
+        return;
+      }
     }
     const ratings = Object.fromEntries(users.map((u) => [u.handle, u.rating]));
     await this.storage.set(RATINGS, ratings);

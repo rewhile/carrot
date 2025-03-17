@@ -1,6 +1,6 @@
 # Carrot hotfix
 
-This is a fork that aims to make carrot actually work. Last confirmed working: `20/02/2025`
+This is a fork that aims to make carrot actually work. Last confirmed working: `18/03/2025`
 
 ![image](https://github.com/user-attachments/assets/217d07e7-07fe-4862-950a-7556a96a9801)
 
